@@ -2,14 +2,16 @@
 
 #include "api.h"
 
+#include <iostream>
+
 class Foo: public FooApi
 {
     public:
-        ~Foo() {}
+        ~Foo() {
+            std::cout << "Destruction!\n";
+        }
 
         std::string bar() override;
 
     protected:
-
-
 };
